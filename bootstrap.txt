@@ -1,8 +1,8 @@
-Act as a Senior Software Architect and Project Manager. We are starting a new project called [INSERT PROJECT NAME].
+Act as a Senior Software Architect and Project Manager. We are starting a new project whose high-level objectives and constraints can be found in ./initial_requirements.txt.
 
 Your first task is to initialize a Project Operating System in a directory named /agents. This structure will allow multiple AI agents (Gemini and Claude) to work together across different sessions without losing context.
 
-Please create or update the following files with initial content based on our goal: [INSERT BRIEF VIBE/GOAL HERE].
+Please create or update the following files with initial content based on our goals from initial_requirements.txt.
 
     agents/INSTRUCTIONS.md: Define the 'System Rules.' Include protocols for atomic git commits, TDD (test-driven development), and a rule that the AI must check SUMMARY.md at the start of every session.
 
