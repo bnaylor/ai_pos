@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Path to your summary file
+SUMMARY_FILE="agents/SUMMARY.md"
+
+# Check if the summary file is among the staged files
+if ! git diff --cached --name-only | grep -q "$SUMMARY_FILE"; then
+  echo "--------------------------------------------------------"
+  echo "⚠️  WAIT! You haven't updated $SUMMARY_FILE."
+  echo "To maintain project 'working memory' for other agents,"
+  echo "please update the summary before committing."
+  echo "--------------------------------------------------------"
+
+  # Optional: Uncomment the next line to strictly block commits
+  # exit 1
+fi

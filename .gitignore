@@ -1,0 +1,3 @@
+# Agent scratchpad (session-specific working files)
+agents/scratchpad/*
+!agents/scratchpad/README.md

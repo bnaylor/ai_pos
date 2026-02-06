@@ -18,16 +18,6 @@ update this to be in an initial state.  And delete this line/section, since it w
 - **Lint:** `npm run lint`
 - **Test:** `npm run test`
 
-## 🤖 Agent Model Preferences
-*Assigning roles to play to each model's unique strengths.*
-
-| Task Category | Primary Agent | Why? |
-| :--- | :--- | :--- |
-| **Architectural Design** | Gemini | Superior at handling massive context and file mappings. |
-| **UI/UX & Components** | Claude | Higher aesthetic 'taste' and precision in CSS/Layouts. |
-| **Complex Logic/Math** | Gemini | Stronger performance on algorithmic edge cases. |
-| **Refactoring/Cleanup** | Claude | More conservative and less likely to break existing patterns. |
-
 ## 📐 Architectural Rules (The "Vibe" Guardrails)
 - **Pattern:** [e.g., Use Functional Components and Hooks; avoid Classes.]
 - **Error Handling:** [e.g., Always use try/catch blocks in Server Actions with logged errors.]
