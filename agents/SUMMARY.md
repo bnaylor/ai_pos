@@ -1,35 +1,35 @@
 # Project State & Session Summary
 
+## Meta-Comment for Bootstrap
+- This is currently a template for SUMMARY.md as we have not yet started the project.  If you are reading this, you should
+update this to be in an initial state.  And delete this line/section, since it won't be true anymore.
+
 ## 📍 Current Status
-- **Last Updated:** 2026-02-06
-- **Active Branch:** `main`
-- **Current Milestone:** Project OS structure refinement
-- **Build Status:** ✅ N/A (template project)
+- **Last Updated:** [Date/Time]
+- **Active Branch:** `main` / `feature-xyz`
+- **Current Milestone:** [e.g., Auth Implementation]
+- **Build Status:** ✅ Passing / ❌ Broken
 
 ## 🛠 Recent Changes (Last Session)
-- [feat] Added `DECISIONS.md` for tracking architectural decision records
-- [feat] Added `scratchpad/` directory for session working notes (gitignored)
-- [feat] Added `.githooks/pre-commit` with instructions for `core.hooksPath`
-- [refactor] Removed model preferences table from TECH_STACK.md (too prescriptive)
-- [docs] Updated INSTRUCTIONS.md with new startup steps and operational rules
+*Summarize what was actually accomplished in the last 10-20 turns.*
+- [feat] Added JWT middleware to `/api/v1`
+- [refactor] Moved database config to `internal/db`
+- [fix] Resolved race condition in user signup flow
 
 ## 🧠 Working Memory & Context
-- **Known Technical Debt:** None
-- **Assumptions Made:** Human will arbitrate conflicts between agents for now
-- **Blockers:** None
+*Crucial for the "Vibe Coding" transition—what's in the AI's head right now?*
+- **Known Technical Debt:** The `user_test.go` is currently mocked; needs real DB integration.
+- **Assumptions Made:** Assuming the frontend will handle the 401 redirect logic.
+- **Blockers:** Waiting for API key confirmation for Stripe integration.
 
 ## 🤝 Handover Notes (Gemini ↔ Claude)
-> **Context:**
-> Claude reviewed the initial POS structure and suggested improvements. We added:
-> 1. DECISIONS.md for ADRs - important for "why did we do X?" questions later
-> 2. scratchpad/ for temp working notes that shouldn't be committed
-> 3. Portable git hooks via .githooks/ + core.hooksPath
-> 4. Removed the model preferences table - it was too prescriptive and time-bound
->
-> The bootstrap files (bootstrap.txt, initial_requirements.txt) are still present intentionally - we're still refining ai_pos before starting a real project.
+*Specifically for when you switch models or start a fresh session.*
+> **STOP! Read this before starting:**
+> 1. We just finished the backend logic for [Feature X], but the **tests are failing** because of a type mismatch in the schema.
+> 2. **Don't** try to refactor the whole schema; just patch the `User` struct in `types.ts`.
+> 3. The next logical step is to verify the connection in the `/dashboard` route.
 
 ## 📋 Next Steps (Priority Order)
-1. [ ] Decide on first real project to build with this system
-2. [ ] Initialize REQUIREMENTS.md with project goals
-3. [ ] Clean up bootstrap files when ready to start
-4. [ ] Rebase to new repo when starting actual project
+1. [ ] Fix the failing type check in `types.ts`.
+2. [ ] Implement the `useAuth` hook in the React frontend.
+3. [ ] Run `npm run test:unit` to verify core logic.
