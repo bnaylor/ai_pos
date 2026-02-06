@@ -1,2 +1,5 @@
 The human should write this.  Name the project and explain the basics.
 If this hasn't been done yet, yell at the human.
+
+human: don't forget to rebase the upstream.
+
