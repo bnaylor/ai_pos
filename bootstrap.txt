@@ -1,0 +1,16 @@
+Act as a Senior Software Architect and Project Manager. We are starting a new project called [INSERT PROJECT NAME].
+
+Your first task is to initialize a Project Operating System in a directory named /agents. This structure will allow multiple AI agents (Gemini and Claude) to work together across different sessions without losing context.
+
+Please create or update the following files with initial content based on our goal: [INSERT BRIEF VIBE/GOAL HERE].
+
+    agents/INSTRUCTIONS.md: Define the 'System Rules.' Include protocols for atomic git commits, TDD (test-driven development), and a rule that the AI must check SUMMARY.md at the start of every session.
+
+    agents/REQUIREMENTS.md: Define the core features, user stories, and 'Definition of Done.'
+
+    agents/TECH_STACK.md: Outline the languages, frameworks, and specific libraries we will use. Add a section for 'Model Preferences' (e.g., Gemini for logic/infra, Claude for UI/UX).
+
+    agents/SUMMARY.md: Create the initial state. Mark the project as 'Started,' list the current session's objectives, and include a 'Handover Notes' section.
+
+Once these files are drafted, provide a brief overview of the architecture and ask me for the first task to begin coding. You can then also delete ./bootstrap.txt.
+
