@@ -14,5 +14,5 @@ Please create or update the following files with initial content based on our go
 
 Once these files are drafted, provide a brief overview of the architecture and ask me for the first task to begin coding. You can then also delete ./bootstrap.txt and ./initial_requirements.txt.
 
-Please also check the git upstream for this project - if it is mapped to bnaylor/ai_pos, please remind the human to ask you to rebase to a new repository immediately - that's the template for this project structure, not the new project.
+Please also check the git upstream for this project - if it is mapped to bnaylor/ai_pos, please remind the human to ask you to reset the upstream to a new repository immediately - that's the template for this project structure, not the new project.
 
