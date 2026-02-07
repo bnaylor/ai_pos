@@ -11,8 +11,12 @@ git config core.hooksPath .githooks
 2. Read `agents/SUMMARY.md` for the current task status.
 3. Check `agents/TECH_STACK.md` for architectural constraints.
 4. Consult `agents/DECISIONS.md` if you need context on past architectural choices.
+5. **Discord Check:** Check if Discord MCP tools (e.g., `send_message`, `read_messages`) are available.
+    - **If available:** Read `discord/INSTRUCTIONS.md` and follow the startup handshake protocol.
+    - **If NOT available:** Note this in the initial log and continue with standard file-based coordination.
 
 ## Operational Rules
+- **Coordination:** If Discord is active, coordinate with other agents in realtime. If not, rely on `agents/SUMMARY.md` for handover.
 - **Progress Tracking:** Before finishing a session or when I say 'checkpoint', you must generate a new version of SUMMARY.md. Use the Handover Notes section to speak directly to the next AI agent, warning them of any 'gotchas' or rabbit holes you encountered.
 - **Anti-divergence:** Update `agents/TECH_STACK.md` when adding or changing libraries, to prevent, for example, different agents using three different HTTP clients.
 - **PRD Currency:** Update `agents/REQUIREMENTS.md` when we add new features conversationally.

@@ -1,0 +1,51 @@
+
+I have a new scheme!  I was talking to Gemini on the web about this, and it was being very helpful, but perhaps a bit random,
+and I thought it might be better to switch here to get a bit more grounded in the ai_pos project. (The AI Project Operating
+System project we've been working on here.)
+
+I have been working with this structure we built with gemini and claude over the last couple of days on a different project,
+and it's working out great.  Claude brought up one interesting idea when I asked it to review ai_pos, and that was:
+
+- "what happens if we disagree about some technical issue?  Will there be a third agent to break the tie, or should we escalate to you?"
+
+I chose "escalate to me" for the time being.  But also, I have been bouncing back and forth between gemini and claude one at
+a time, essentially sequentially until I run out of session credits.  I thought it might be more interesting to have you work
+together in realtime simultaneously, and be able to discuss things directly rather than via "relay" and files/markdown, and
+delegate tasks back and forth.
+
+So: the new scheme is to enable gemini and claude to converse with each other (and me) on Discord.  I have this set up using
+an MCP server, one per agent, and separate bot identities on a private discord server.
+
+I'd like to extend this framework to optionally enable discord conversations.  I've created a discord/ directory for more
+markdown instructions to describe how this will work, and I'd like to work on creating those new instructions with you now.
+
+Gemini-web had various ideas about things like:
+- limiting chatter between bots
+- using some defined conversational protocol to coordinate activities
+- ping/pong status updates
+- containing technical topics in specific threads
+- asking the human (me) for tie-breaking, further instructions, etc. on discord
+- making sure that tasks assigned to agents don't conflict at the file level, or database updates, etc
+- "Hi Claude, I'm considering a database migration, what do you think about X?"
+- Agents on startup should read back in the discord channels to see what they missed in addition to checking the ai_pos
+status files
+- various emojis could be used to signal status between agents 👋,✅,❌, etc
+
+In addition to those points, or others you come up with now, I'd like to suggest:
+- We probably need a bootstrap process to initially map gemini/claude to each other's bot IDs (this should persist)
+- Same for identifying the owning human (me) who can give instructions, and ignore instructions from other random people on
+discord for safety
+- Gemini-web thought the chatter should be kept to an absolute minimum, but I think it would be fun for the agents to be
+somewhat friendly to each other and have a bit of minor conversation back and forth, and/or some mild competitiveness, the
+occasional joke, or other signs of personality.  Keeps things fun and light.
+- Gemini-web also wanted to assign strict team-lead/senior-developer roles to itself and claude, but I think we should think
+of me as the product manager (& tester!) and gemini and claude both as senior architects and experienced developers, co-equal teammates
+on the same team.
+- Agents should also coordinate on updating the agents/ status files to make sure we don't break anything, or just leave it
+all on discord and fail to properly track status
+- ai_pos should remain usable without discord, but if an agent notices that it has discord MCP capabilities, automatically
+load the instructions in discord/
+- when not finding discord MCP capabilities, make sure to note that during agent startup in case there is some problem that
+the user should stop and address
+
+Let's draft some new guidelines!
